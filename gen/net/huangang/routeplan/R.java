@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package baidumapsdk.demo;
+package net.huangang.routeplan;
 
 public final class R {
     public static final class attr {

@@ -1,5 +1,5 @@
 /** Automatically generated file. DO NOT MODIFY */
-package baidumapsdk.demo;
+package net.huangang.routeplan;
 
 public final class BuildConfig {
     public final static boolean DEBUG = true;
