@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+
+    <string name="app_name">百度地图SDK DEMO</string>
+    <string name="demo_name_route">路径规划功能</string>
+    <string name="demo_title_route">路径规划功能--RoutePlanDemo</string>
+</resources>
