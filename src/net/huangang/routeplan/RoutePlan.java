@@ -1,6 +1,9 @@
 package net.huangang.routeplan;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -89,16 +92,22 @@ public class RoutePlan extends Activity implements BaiduMap.OnMapClickListener,
         mBaidumap.clear();
         // 处理搜索按钮响应
         EditText editSt = (EditText) findViewById(R.id.start);
+        EditText editPa = (EditText) findViewById(R.id.path);
         EditText editEn = (EditText) findViewById(R.id.end);
         //设置起终点信息，对于tranist search 来说，城市名无意义
+        //PlanNode stNode = PlanNode.withCityNameAndPlaceName("杭州", editSt.getText().toString());
+        //PlanNode enNode = PlanNode.withCityNameAndPlaceName("杭州", editEn.getText().toString());
         PlanNode stNode = PlanNode.withCityNameAndPlaceName("杭州", editSt.getText().toString());
+        PlanNode paNode = PlanNode.withCityNameAndPlaceName("杭州", editPa.getText().toString());
         PlanNode enNode = PlanNode.withCityNameAndPlaceName("杭州", editEn.getText().toString());
+        
+        List<PlanNode> listPaNode = new ArrayList<PlanNode>();
+        listPaNode.add(paNode);
 
         // 实际使用中请对起点终点城市进行正确的设定
         if (v.getId() == R.id.drive) {
             mSearch.drivingSearch((new DrivingRoutePlanOption())
-                    .from(stNode)
-                    .to(enNode));
+                    .from(stNode).passBy(listPaNode).to(enNode));
         } 
     }
 
