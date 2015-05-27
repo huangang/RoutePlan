@@ -29,17 +29,15 @@ public final class R {
         public static final int pre_down_=0x7f02000f;
     }
     public static final class id {
-        public static final int customicon=0x7f060008;
+        public static final int customicon=0x7f060006;
         public static final int drive=0x7f060004;
         public static final int end=0x7f060003;
-        public static final int map=0x7f060007;
-        public static final int next=0x7f06000a;
-        public static final int pre=0x7f060009;
+        public static final int map=0x7f060005;
+        public static final int next=0x7f060008;
+        public static final int pre=0x7f060007;
         public static final int start=0x7f060001;
         public static final int textView1=0x7f060000;
         public static final int textView2=0x7f060002;
-        public static final int transit=0x7f060005;
-        public static final int walk=0x7f060006;
     }
     public static final class layout {
         public static final int activity_routeplan=0x7f030000;

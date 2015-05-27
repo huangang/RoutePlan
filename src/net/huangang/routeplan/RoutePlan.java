@@ -31,10 +31,8 @@ import com.baidu.mapapi.search.route.OnGetRoutePlanResultListener;
 import com.baidu.mapapi.search.route.PlanNode;
 import com.baidu.mapapi.search.route.RoutePlanSearch;
 import com.baidu.mapapi.search.route.TransitRouteLine;
-import com.baidu.mapapi.search.route.TransitRoutePlanOption;
 import com.baidu.mapapi.search.route.TransitRouteResult;
 import com.baidu.mapapi.search.route.WalkingRouteLine;
-import com.baidu.mapapi.search.route.WalkingRoutePlanOption;
 import com.baidu.mapapi.search.route.WalkingRouteResult;
 
 /**
@@ -101,16 +99,7 @@ public class RoutePlan extends Activity implements BaiduMap.OnMapClickListener,
             mSearch.drivingSearch((new DrivingRoutePlanOption())
                     .from(stNode)
                     .to(enNode));
-        } else if (v.getId() == R.id.transit) {
-            mSearch.transitSearch((new TransitRoutePlanOption())
-                    .from(stNode)
-                    .city("杭州")
-                    .to(enNode));
-        } else if (v.getId() == R.id.walk) {
-            mSearch.walkingSearch((new WalkingRoutePlanOption())
-                    .from(stNode)
-                    .to(enNode));
-        }
+        } 
     }
 
     /**
